@@ -1,6 +1,7 @@
 import scrapy
 import pandas as pd
 from io import BytesIO
+import datetime as dt
 
 class RedfinEstateSpider(scrapy.Spider):
     name = 'redfin_estate'
@@ -17,4 +18,6 @@ class RedfinEstateSpider(scrapy.Spider):
         df = df.fillna("")
         for idx, row in df.iterrows():
             # print(dict(row))
-            yield dict(row)
+            item = dict(row)
+            item['Timestamp'] = dt.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            yield item
