@@ -1,0 +1,2302 @@
+2020-12-28 18:00:18 [scrapy.utils.log] INFO: Scrapy 2.4.1 started (bot: estate_insight)
+2020-12-28 18:00:18 [scrapy.utils.log] INFO: Versions: lxml 4.5.0.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 20.3.0, Python 3.7.6 (default, Jan  8 2020, 13:42:34) - [Clang 4.0.1 (tags/RELEASE_401/final)], pyOpenSSL 19.1.0 (OpenSSL 1.1.1d  10 Sep 2019), cryptography 2.8, Platform Darwin-19.6.0-x86_64-i386-64bit
+2020-12-28 18:00:18 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_DEBUG': True,
+ 'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'estate_insight',
+ 'LOG_FILE': '/Users/donglin/Workspace/estate_insight/logs/info_2020-12-28.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'estate_insight.spiders',
+ 'SPIDER_MODULES': ['estate_insight.spiders']}
+2020-12-28 18:00:18 [scrapy.extensions.telnet] INFO: Telnet Password: 0c74c2bcc0f2d871
+2020-12-28 18:00:18 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2020-12-28 18:00:18 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'estate_insight.rotate_useragent.RotateUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-12-28 18:00:18 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-12-28 18:00:18 [scrapy.middleware] INFO: Enabled item pipelines:
+['estate_insight.pipelines.DuplicatesPipeline']
+2020-12-28 18:00:18 [scrapy.core.engine] INFO: Spider opened
+2020-12-28 18:00:18 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-12-28 18:00:18 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-12-28 18:00:18 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay: 2573 ms (-2426) | latency:  146 ms | size:  2966 bytes
+2020-12-28 18:00:22 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay: 1302 ms (-1270) | latency:   32 ms | size:  3329 bytes
+2020-12-28 18:00:24 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:  662 ms (-640) | latency:   21 ms | size:  2989 bytes
+2020-12-28 18:00:25 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:  345 ms (-316) | latency:   29 ms | size: 10732 bytes
+2020-12-28 18:00:26 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:  182 ms (-162) | latency:   19 ms | size:  7215 bytes
+2020-12-28 18:00:26 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:26 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:26 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:26 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:26 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:27 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:  121 ms (-61) | latency:   60 ms | size:  3749 bytes
+2020-12-28 18:00:27 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:   78 ms (-42) | latency:   36 ms | size:  2543 bytes
+2020-12-28 18:00:27 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:   50 ms (-28) | latency:   21 ms | size:  5804 bytes
+2020-12-28 18:00:27 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:27 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:27 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 2 | delay:   70 ms (+20) | latency:   70 ms | size:  4658 bytes
+2020-12-28 18:00:27 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:27 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:27 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:27 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 3 | delay:  109 ms (+39) | latency:  109 ms | size: 21989 bytes
+2020-12-28 18:00:27 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 2 | delay:  205 ms (+95) | latency:  205 ms | size:  3688 bytes
+2020-12-28 18:00:27 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:  168 ms (-37) | latency:  130 ms | size:  3516 bytes
+2020-12-28 18:00:27 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:27 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:27 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:27 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:27 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:27 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:27 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:27 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:27 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:27 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:27 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:27 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:27 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:27 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:27 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:27 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:  217 ms (+49) | latency:  217 ms | size:  6360 bytes
+2020-12-28 18:00:28 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:  129 ms (-88) | latency:   40 ms | size:  2806 bytes
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 2 | delay:  103 ms (-26) | latency:   77 ms | size:  9921 bytes
+2020-12-28 18:00:28 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:  224 ms (+121) | latency:  224 ms | size:  6581 bytes
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:  141 ms (-83) | latency:   57 ms | size:  1817 bytes
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:28 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:29 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:   91 ms (-49) | latency:   42 ms | size: 21694 bytes
+2020-12-28 18:00:29 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:29 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:29 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:   74 ms (-17) | latency:   57 ms | size:  6179 bytes
+2020-12-28 18:00:29 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:29 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:29 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:   61 ms (-13) | latency:   47 ms | size:  5004 bytes
+2020-12-28 18:00:29 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:29 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:29 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:29 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:   50 ms (-10) | latency:   39 ms | size:  2392 bytes
+2020-12-28 18:00:29 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:29 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:29 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:29 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:29 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:29 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:29 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:   42 ms (-8) | latency:   34 ms | size:  8642 bytes
+2020-12-28 18:00:29 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:   41 ms (+0) | latency:   41 ms | size: 20707 bytes
+2020-12-28 18:00:29 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:   38 ms (-2) | latency:   36 ms | size:  5191 bytes
+2020-12-28 18:00:30 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 6 | delay:  334 ms (+295) | latency:  334 ms | size: 12217 bytes
+2020-12-28 18:00:30 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 5 | delay:  327 ms (-6) | latency:  321 ms | size:  7187 bytes
+2020-12-28 18:00:30 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 4 | delay:  411 ms (+83) | latency:  411 ms | size:  5263 bytes
+2020-12-28 18:00:30 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 3 | delay:  345 ms (-66) | latency:  279 ms | size:  1933 bytes
+2020-12-28 18:00:30 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 2 | delay:  360 ms (+15) | latency:  360 ms | size:  2665 bytes
+2020-12-28 18:00:30 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:30 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:30 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:  517 ms (+156) | latency:  517 ms | size:  4347 bytes
+2020-12-28 18:00:30 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:30 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:30 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:30 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:30 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:30 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:30 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:30 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:30 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:30 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:30 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:30 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:31 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:  398 ms (-118) | latency:  279 ms | size:  4102 bytes
+2020-12-28 18:00:31 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:31 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:31 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:31 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:31 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:31 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:31 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:31 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:31 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:  384 ms (-13) | latency:  370 ms | size:  3692 bytes
+2020-12-28 18:00:31 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:31 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:31 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:32 [scrapy.extensions.throttle] INFO: slot: www.redfin.com | conc: 1 | delay:  277 ms (-106) | latency:  170 ms | size:  1860 bytes
+2020-12-28 18:00:32 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:32 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:32 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:32 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:32 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method FeedExporter.item_scraped of <scrapy.extensions.feedexport.FeedExporter object at 0x7fce94e68a50>>
+Traceback (most recent call last):
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/utils/defer.py", line 157, in maybeDeferred_coro
+    result = f(*args, **kw)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/extensions/feedexport.py", line 372, in item_scraped
+    slot.exporter.export_item(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in export_item
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 238, in _build_row
+    for s in values:
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 234, in <genexpr>
+    values = list(self._build_row(x for _, x in fields))
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/scrapy/exporters.py", line 61, in _get_serialized_fields
+    item = ItemAdapter(item)
+  File "/Users/donglin/Tools/anaconda3/lib/python3.7/site-packages/itemadapter/adapter.py", line 189, in __init__
+    raise TypeError(f"No adapter found for objects of type: {type(item)} ({item})")
+TypeError: No adapter found for objects of type: <class 'NoneType'> (None)
+2020-12-28 18:00:32 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-12-28 18:00:32 [scrapy.extensions.feedexport] INFO: Stored csv feed (3206 items) in: /Users/donglin/Workspace/estate_insight/data/data_2020-12-28.csv
+2020-12-28 18:00:32 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 15653,
+ 'downloader/request_count': 33,
+ 'downloader/request_method_count/GET': 33,
+ 'downloader/response_bytes': 240795,
+ 'downloader/response_count': 33,
+ 'downloader/response_status_count/200': 33,
+ 'elapsed_time_seconds': 14.029703,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 12, 29, 2, 0, 32, 137721),
+ 'item_scraped_count': 3322,
+ 'log_count/ERROR': 116,
+ 'log_count/INFO': 44,
+ 'memusage/max': 88641536,
+ 'memusage/startup': 88641536,
+ 'response_received_count': 33,
+ 'scheduler/dequeued': 33,
+ 'scheduler/dequeued/memory': 33,
+ 'scheduler/enqueued': 33,
+ 'scheduler/enqueued/memory': 33,
+ 'start_time': datetime.datetime(2020, 12, 29, 2, 0, 18, 108018)}
+2020-12-28 18:00:32 [scrapy.core.engine] INFO: Spider closed (finished)
